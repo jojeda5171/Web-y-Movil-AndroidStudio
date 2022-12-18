@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrarActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Formulario de Registro"
+        android:textStyle="bold|italic"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editNombresRegistro"
+        android:layout_width="0dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:drawableStart="@drawable/user"
+        android:drawablePadding="10dp"
+        android:paddingHorizontal="10dp"
+        android:inputType="textPersonName"
+        android:hint="Ingrese sus nombres"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/editEdadRegistro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="10dp"
+        android:drawableStart="@drawable/calendar"
+        android:drawablePadding="10dp"
+        android:hint="ingrese su edad"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editNombresRegistro" />
+
+    <RadioGroup
+        android:layout_width="0dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="20dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEdadRegistro">
+
+        <RadioButton
+            android:id="@+id/rvMasculino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Maculino" />
+
+        <RadioButton
+            android:id="@+id/rvFemenino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Femenino" />
+    </RadioGroup>
+</android.support.constraint.ConstraintLayout>

@@ -52,11 +52,12 @@
         app:layout_constraintTop_toBottomOf="@+id/editNombresRegistro" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="0dp"
         android:layout_height="104dp"
         android:layout_marginTop="20dp"
-        android:paddingHorizontal="20dp"
 
+        android:paddingHorizontal="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editEdadRegistro">
@@ -74,4 +75,27 @@
             android:layout_height="wrap_content"
             android:text="Femenino" />
     </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/cvTerminos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Acepta Términos"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <Button
+        android:id="@+id/btnEnviarRegistro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="ENVIAR"
+        android:backgroundTint="@color/celeste"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cvTerminos" />
 </android.support.constraint.ConstraintLayout>

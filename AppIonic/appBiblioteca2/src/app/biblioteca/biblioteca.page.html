@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-avatar>
+      <img alt="Silhouette of a person's head" src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" />
+    </ion-avatar>
+    <ion-title>BIBLIOTECA</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let libro of libros">
+    <ion-card-header>
+      <ion-card-title>{{libro.nombre}}</ion-card-title>
+      <ion-card-subtitle>{{libro.autor}}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <img
+        [src]="libro.portada ? libro.portada:'https://thumbs.dreamstime.com/b/no-image-available-icon-flat-vector-no-image-available-icon-flat-vector-illustration-132482953.jpg'">
+      <div>{{libro.precio}}</div>
+      <ion-button color="secondary"
+      (click)="abrirFormulario(libro)">Editar</ion-button>
+      <ion-button color="danger"
+      (click)="eliminarLibro(libro)">Eliminar</ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="abrirFormularioRegistro()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

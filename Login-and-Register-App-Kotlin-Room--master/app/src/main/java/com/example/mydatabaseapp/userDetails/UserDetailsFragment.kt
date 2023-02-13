@@ -45,7 +45,7 @@ class UserDetailsFragment : Fragment() {
 
         binding.lifecycleOwner = this
 
-        userDetailsViewModel.navigateto.observe(this, Observer { hasFinished ->
+        userDetailsViewModel.navigateto.observe(viewLifecycleOwner, Observer { hasFinished ->
             if (hasFinished == true) {
                 val action = UserDetailsFragmentDirections.actionUserDetailsFragmentToLoginFragment()
                 NavHostFragment.findNavController(this).navigate(action)
@@ -68,7 +68,7 @@ class UserDetailsFragment : Fragment() {
 
     private fun displayUsersList() {
         Log.i("MYTAG", "Inside ...UserDetails..Fragment")
-        userDetailsViewModel.users.observe(this, Observer {
+        userDetailsViewModel.users.observe(viewLifecycleOwner, Observer {
             binding.usersRecyclerView.adapter = MyRecycleViewAdapter(it)
         })
 
